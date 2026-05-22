@@ -1,3 +1,9 @@
+  <?php
+  session_start();
+    if(!isset($_SESSION['users_id'])){
+        header('refresh:0;url = login.html');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
