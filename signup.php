@@ -13,20 +13,13 @@
     ('$f_name', '$l_name', '$m_phone', '$e_mail', '$enc_pass')";
     //execute query
     $res_local = pg_query($local_conn, $sql);
-      if($res_local){
+    $res = pg_query($supa_conn, $sql);
+      if($res_local && $res_supa){
     //echo "Listo. Usuario registrado";
       echo"<script>alert('Listo. Usuario registrado')</script>";
       
     } else {
       echo"<script>alert('Error. Usuario no registrado')</script>";
     }     
-      header('refresh:0;url = login.html');
-      $res = pg_query($supa_conn, $sql);
-      if($res){
-    //echo "Listo. Usuario registrado";
-      echo"<script>alert('Listo. Usuario registrado')</script>";
-      
-    } else {
-      echo"<script>alert('Error. Usuario no registrado')</script>";
-    }     
-      header('refresh:0;url = login.html');
+      header('refresh:0;url = login.php');
+     

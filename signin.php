@@ -26,7 +26,7 @@
             header('refresh:0;url = index.php');
     }else{
             echo"<script>alert('Email or password not found')</script>";
-            header('refresh:0;url = login.html');
+            header('refresh:0;url = login.php');
         }
     } else {
         echo "Query error |||. ";
